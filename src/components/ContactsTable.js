@@ -16,16 +16,16 @@ function TableHeader () {
 function TableRow (props, idx) {
   return (
     <tr key={idx}>
-      <td>{props.id}</td>
+      <td>{idx +1}</td>
       <td>{props.name}</td>
       <td>{props.phonenumber}</td>
-      <td className='align-right'>$ {props.email}</td>
+      <td className='align-right'>{props.email}</td>
     </tr>
   )
 }
 
 function ContactsTable (props) {
-
+  console.log('table render')
   const rows = props.items.map(TableRow)
 
   return (

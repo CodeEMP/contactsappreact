@@ -39,11 +39,11 @@ class App extends Component {
   render() {
 
     let pageComponent = <Homepage />
-  //  if (this.state.route === '/contacts') {
-  //    pageComponent = <ContactsPage />
-  //  } else if (this.state.route === '/addcontact') {
-  //    pageComponent = <AddContact />
-  //  }
+    if (this.state.route === '/contacts') {
+      pageComponent = <ContactsPage />
+    } else if (this.state.route === '/addcontact') {
+      pageComponent = <AddContact />
+    }
 
     return (
       <main className='main-app'>

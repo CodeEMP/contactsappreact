@@ -4,7 +4,7 @@ import {getContacts} from '../Contacts.js'
 
 class ContactsPage extends Component {
 
-  constructor () {
+  constructor (props) {
     super(props);
     this.state = {
       contacts:getContacts(),
@@ -12,9 +12,10 @@ class ContactsPage extends Component {
   }
 
   render () {
+    console.log('page render')
     return (
       <section className="section has-background-light is-marginless">
-        <ContactsTable props={this.state.contacts} />
+        <ContactsTable items={this.state.contacts} />
       </section>
     )
   }

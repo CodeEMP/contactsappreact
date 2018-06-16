@@ -23,8 +23,8 @@ function deleteItem (id) {
   const newContacts = contacts.filter(function (item) {
     return item.id.toString() !== id.toString()
   })
-  setInventory(newInventory)
-  return getInventory()
+  setContacts(newContacts)
+  return getContacts()
 }
 
 export {addItem, deleteItem, getContacts, setContacts}
